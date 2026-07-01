@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe - DT BAT | Rénovation Énergétique</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-white text-gray-900 font-sans antialiased;
+            }
+            section {
+                @apply py-32 border-b border-gray-200;
+            }
+        }
+        @layer utilities {
+            .wire-box {
+                @apply border border-gray-300 bg-white;
+            }
+            .wire-img {
+                @apply bg-gray-100 border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-semibold text-center p-4;
+            }
+            .wire-btn {
+                @apply border border-gray-900 bg-gray-900 text-white hover:bg-gray-800 transition-colors px-8 py-4 font-semibold text-sm inline-block text-center;
+            }
+            .wire-btn-outline {
+                @apply border border-gray-900 bg-transparent text-gray-900 hover:bg-gray-100 transition-colors px-8 py-4 font-semibold text-sm inline-block text-center;
+            }
+            .wire-input {
+                @apply border border-gray-300 bg-white px-5 py-4 focus:outline-none focus:border-gray-900 w-full text-sm;
+            }
+            .wire-label {
+                @apply block text-xs font-bold text-gray-700 mb-3 uppercase tracking-wider;
+            }
+        }
+    </style>
+</head>
+<body class="relative min-h-screen overflow-x-hidden">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 right-0 z-40 bg-white border-b border-gray-200 py-6">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
+            
+            <a href="#" class="font-bold text-2xl tracking-tighter text-gray-900 pointer-events-auto">
+                [ LOGO DT BAT ]
+            </a>
+
+            <nav class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-600">
+                <a href="#" class="hover:text-gray-900 transition-colors">Accueil</a>
+                <a href="#concept" class="hover:text-gray-900 transition-colors">Notre Concept</a>
+                <a href="#expertises" class="hover:text-gray-900 transition-colors">Expertises</a>
+                <a href="#aides" class="hover:text-gray-900 transition-colors">Aides Financières</a>
+                <a href="#avis" class="hover:text-gray-900 transition-colors">Avis</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="hidden sm:inline-block wire-btn py-3 px-6">
+                    Devis gratuit
+                </a>
+                <button class="md:hidden p-2 text-gray-900">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN WRAPPER -->
+    <main class="pt-32">
+
+        <!-- 1. HERO BANNER -->
+        <section id="hero">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <div class="flex flex-col items-start">
+                    <div class="flex gap-4 mb-10">
+                        <span class="inline-block px-4 py-2 border border-gray-300 text-xs font-bold text-gray-600 uppercase tracking-wider">
+                            Artisan RGE
+                        </span>
+                        <span class="inline-block px-4 py-2 border border-gray-300 text-xs font-bold text-gray-600 uppercase tracking-wider">
+                            Garantie Décennale
+                        </span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight tracking-tight mb-8">
+                        Rénover avec exigence,<br>
+                        isoler avec performance.
+                    </h1>
+                    
+                    <p class="text-xl text-gray-600 leading-relaxed mb-12 max-w-xl">
+                        DT BAT réinvente l'habitat breton. Rénovation thermique globale, Isolation Thermique par l'Extérieur (ITE) et ravalement de façades à Lorient et Morbihan (56).
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
+                        <a href="#contact" class="wire-btn">
+                            Estimer mon projet
+                        </a>
+                        <a href="#expertises" class="wire-btn-outline">
+                            Voir les expertises
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-full aspect-video lg:aspect-square wire-img rounded-lg">
+                    <div class="flex flex-col items-center gap-3">
+                        <svg class="w-12 h-12 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                        <span class="text-lg font-bold">[ VISUEL PRINCIPAL HERO ]</span>
+                        <span class="text-sm font-normal">Image de maison ou équipe</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. QUI SOMMES-NOUS -->
+        <section id="concept" class="bg-gray-50">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+                    
+                    <div class="lg:col-span-5">
+                        <span class="text-sm font-bold text-gray-500 uppercase tracking-widest block mb-6">Ancrage Local</span>
+                        <h2 class="text-4xl lg:text-5xl font-bold mb-10 leading-tight">
+                            L'expertise bretonne,<br>la rigueur technique.
+                        </h2>
+                        
+                        <div class="wire-box p-10 mt-12">
+                            <div class="flex items-start gap-6">
+                                <div class="w-12 h-12 wire-img shrink-0 rounded-full">
+                                    <svg class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Garanties & Sécurité</h4>
+                                    <p class="text-base text-gray-600 mt-3 leading-relaxed">
+                                        Couverture Décennale SMABTP et certification RGE Qualibat pour l'obtention des aides.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 flex flex-col gap-10 text-gray-700">
+                        <p class="text-2xl font-medium text-gray-900 leading-relaxed">
+                            Basée à Lorient, DT BAT est le partenaire de confiance pour une rénovation esthétique et performante dans le Morbihan (56).
+                        </p>
+                        
+                        <p class="text-lg leading-relaxed text-gray-600">
+                            Notre conviction est simple : la rénovation énergétique ne doit pas seulement économiser de l’argent, elle doit aussi protéger durablement l’architecture face au climat breton.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-12 pt-12 border-t border-gray-200 mt-8">
+                            <div>
+                                <span class="block text-5xl font-bold mb-3 text-gray-900">10 ans</span>
+                                <span class="text-sm uppercase text-gray-500 font-bold tracking-wider">Garantie chantiers</span>
+                            </div>
+                            <div>
+                                <span class="block text-5xl font-bold mb-3 text-gray-900">100%</span>
+                                <span class="text-sm uppercase text-gray-500 font-bold tracking-wider">Gestion administrative</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. INTERACTIVE SECTION: STICKY SCROLL (SERVICES) -->
+        <section id="expertises" class="bg-white">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                
+                <div class="mb-24">
+                    <span class="text-sm font-bold text-gray-500 uppercase tracking-widest block mb-6">Nos Expertises</span>
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-8">
+                        Solutions globales de rénovation
+                    </h2>
+                    <p class="text-gray-600 max-w-2xl text-xl leading-relaxed">
+                        Défilez pour découvrir nos trois domaines d'intervention.
+                    </p>
+                </div>
+
+                <div class="relative grid grid-cols-1 lg:grid-cols-2 gap-20 items-start pb-24">
+                    
+                    <div class="flex flex-col gap-[40vh] py-12 lg:pb-[30vh]">
+                        
+                        <div data-step="ite" class="step-text-block opacity-40 transition-opacity duration-300 flex flex-col justify-center scroll-mt-40">
+                            <span class="text-gray-500 text-sm font-bold uppercase mb-6 block tracking-widest">01 / Performance</span>
+                            <h3 class="text-4xl font-bold mb-8">Isolation Thermique (ITE)</h3>
+                            <p class="text-gray-600 mb-10 text-xl leading-relaxed">
+                                Enveloppez votre maison d'un manteau isolant. Suppression des ponts thermiques sans toucher à la surface intérieure.
+                            </p>
+                            <button type="button" class="wire-btn-outline self-start">
+                                En savoir plus
+                            </button>
+                        </div>
+
+                        <div data-step="facade" class="step-text-block opacity-40 transition-opacity duration-300 flex flex-col justify-center scroll-mt-40">
+                            <span class="text-gray-500 text-sm font-bold uppercase mb-6 block tracking-widest">02 / Protection</span>
+                            <h3 class="text-4xl font-bold mb-8">Ravalement de Façade</h3>
+                            <p class="text-gray-600 mb-10 text-xl leading-relaxed">
+                                Nettoyage, traitement anti-mousse et réparation des fissures. Application de revêtements hydrofuges et enduits protecteurs.
+                            </p>
+                            <button type="button" class="wire-btn-outline self-start">
+                                En savoir plus
+                            </button>
+                        </div>
+
+                        <div data-step="peinture" class="step-text-block opacity-40 transition-opacity duration-300 flex flex-col justify-center scroll-mt-40">
+                            <span class="text-gray-500 text-sm font-bold uppercase mb-6 block tracking-widest">03 / Esthétique</span>
+                            <h3 class="text-4xl font-bold mb-8">Peinture Int. & Ext.</h3>
+                            <p class="text-gray-600 mb-10 text-xl leading-relaxed">
+                                Finitions soignées pour façades, boiseries et intérieurs. Peintures éco-responsables et préparation minutieuse des supports.
+                            </p>
+                            <button type="button" class="wire-btn-outline self-start">
+                                En savoir plus
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- Right column: Sticky Visual Frame -->
+                    <div class="sticky top-40 h-[50vh] w-full border border-gray-300 bg-gray-50 p-6 shadow-sm">
+                        <div class="relative w-full h-full">
+                            
+                            <!-- Visual Layer 1: Isolation ITE -->
+                            <div id="visual-ite" class="step-visual-layer absolute inset-0 opacity-100 transition-opacity duration-300 wire-img flex-col gap-6">
+                                <svg class="w-16 h-16 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                                </svg>
+                                <div>
+                                    <span class="text-2xl font-bold text-gray-900 block mb-3">[ VISUEL ISOLATION ITE ]</span>
+                                    <span class="text-base font-normal text-gray-500">Coupe technique du mur isolant</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Visual Layer 2: Ravalement -->
+                            <div id="visual-facade" class="step-visual-layer absolute inset-0 opacity-0 transition-opacity duration-300 wire-img flex-col gap-6 pointer-events-none">
+                                <svg class="w-16 h-16 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <div>
+                                    <span class="text-2xl font-bold text-gray-900 block mb-3">[ VISUEL RAVALEMENT ]</span>
+                                    <span class="text-base font-normal text-gray-500">Avant / Après façade réparée</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Visual Layer 3: Peinture -->
+                            <div id="visual-peinture" class="step-visual-layer absolute inset-0 opacity-0 transition-opacity duration-300 wire-img flex-col gap-6 pointer-events-none">
+                                <svg class="w-16 h-16 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                                </svg>
+                                <div>
+                                    <span class="text-2xl font-bold text-gray-900 block mb-3">[ VISUEL PEINTURE ]</span>
+                                    <span class="text-base font-normal text-gray-500">Nuancier et application peinture</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 mt-12 text-sm text-gray-400">
+                <span class="font-bold text-gray-500">Note technique :</span> Section interactive Sticky Scroll (Animation au défilement)
+            </div>
+        </section>
+
+        <!-- 4. AIDES FINANCIÈRES -->
+        <section id="aides" class="bg-gray-50">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                
+                <div class="mb-24">
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-8">Aides Financières (État)</h2>
+                    <p class="text-gray-600 text-xl max-w-2xl leading-relaxed">
+                        En tant qu'artisan RGE, nos prestations ouvrent droit aux dispositifs de financement pour la rénovation énergétique.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    
+                    <div class="wire-box p-10 flex flex-col justify-between">
+                        <div>
+                            <div class="w-16 h-16 wire-img rounded-full mb-8">
+                                <svg class="w-8 h-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">MaPrimeRénov’</h3>
+                            <p class="text-base text-gray-600 mb-10 leading-relaxed">
+                                Aide universelle de l'ANAH calculée selon vos revenus.
+                            </p>
+                        </div>
+                        <span class="text-base font-bold text-gray-900 uppercase tracking-wider">Jusqu'à 75€ / m²</span>
+                    </div>
+
+                    <div class="wire-box p-10 flex flex-col justify-between">
+                        <div>
+                            <div class="w-16 h-16 wire-img rounded-full mb-8">
+                                <svg class="w-8 h-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Primes CEE</h3>
+                            <p class="text-base text-gray-600 mb-10 leading-relaxed">
+                                Prime versée par les fournisseurs d'énergie.
+                            </p>
+                        </div>
+                        <span class="text-base font-bold text-gray-900 uppercase tracking-wider">Cumulable</span>
+                    </div>
+
+                    <div class="wire-box p-10 flex flex-col justify-between">
+                        <div>
+                            <div class="w-16 h-16 wire-img rounded-full mb-8">
+                                <svg class="w-8 h-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Éco-PTZ</h3>
+                            <p class="text-base text-gray-600 mb-10 leading-relaxed">
+                                Prêt bancaire à taux 0% pour le reste à charge.
+                            </p>
+                        </div>
+                        <span class="text-base font-bold text-gray-900 uppercase tracking-wider">Sans intérêts</span>
+                    </div>
+
+                    <div class="wire-box p-10 flex flex-col justify-between">
+                        <div>
+                            <div class="w-16 h-16 wire-img rounded-full mb-8">
+                                <svg class="w-8 h-8 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">TVA Réduite</h3>
+                            <p class="text-base text-gray-600 mb-10 leading-relaxed">
+                                Taux à 5.5% au lieu de 20% directement sur facture.
+                            </p>
+                        </div>
+                        <span class="text-base font-bold text-gray-900 uppercase tracking-wider">Appliquée</span>
+                    </div>
+
+                </div>
+
+                <div class="mt-20 wire-box p-12 flex flex-col lg:flex-row justify-between items-center gap-10">
+                    <div>
+                        <h4 class="text-3xl font-bold mb-4">Accompagnement Administratif Inclus</h4>
+                        <p class="text-lg text-gray-600">Nous montons l'intégralité de vos dossiers de subventions pour vous simplifier la vie.</p>
+                    </div>
+                    <button type="button" class="wire-btn">
+                        Estimer mes aides
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. AVIS & PREUVES -->
+        <section id="avis" class="bg-white">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-20">
+                
+                <div class="lg:col-span-4">
+                    <h2 class="text-4xl font-bold mb-10">Avis Clients</h2>
+                    <p class="text-gray-600 mb-12 text-xl leading-relaxed">
+                        Découvrez l'avis des propriétaires de Lorient et Morbihan sur nos chantiers.
+                    </p>
+                    <div class="flex gap-8">
+                        <div class="w-28 h-20 wire-img text-xs flex-col gap-2">
+                            <span>LOGO</span>
+                            <span class="font-bold">QUALIBAT</span>
+                        </div>
+                        <div class="w-28 h-20 wire-img text-xs flex-col gap-2">
+                            <span>LOGO</span>
+                            <span class="font-bold">RGE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-8 flex flex-col gap-10">
+                    
+                    <div class="wire-box p-10">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8">
+                            <span class="font-bold text-xl text-gray-900">Loïc G. - Lanester</span>
+                            <div class="flex items-center gap-2">
+                                <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                        </div>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            "Excellente prestation pour l'ITE de notre maison. Économies visibles dès le premier hiver et finitions parfaites."
+                        </p>
+                    </div>
+
+                    <div class="wire-box p-10">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8">
+                            <span class="font-bold text-xl text-gray-900">Nathalie S. - Lorient</span>
+                            <div class="flex items-center gap-2">
+                                <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                <svg class="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            </div>
+                        </div>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            "Ravalement très propre. Le chef d'équipe était disponible pour répondre à nos questions. Artisan de confiance à recommander."
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. CONTACT & FOOTER -->
+        <section id="contact" class="bg-gray-50 border-none">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-20">
+                
+                <!-- Formulaire -->
+                <div class="lg:col-span-7">
+                    <h2 class="text-4xl font-bold mb-12">Demande de devis</h2>
+                    
+                    <form class="space-y-10">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                            <div>
+                                <label class="wire-label">Nom Complet *</label>
+                                <input type="text" required class="wire-input">
+                            </div>
+                            <div>
+                                <label class="wire-label">Téléphone *</label>
+                                <input type="tel" required class="wire-input">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                            <div>
+                                <label class="wire-label">Email *</label>
+                                <input type="email" required class="wire-input">
+                            </div>
+                            <div>
+                                <label class="wire-label">Ville (56) *</label>
+                                <input type="text" required class="wire-input">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="wire-label">Projet *</label>
+                            <select class="wire-input">
+                                <option>Isolation</option>
+                                <option>Ravalement</option>
+                                <option>Peinture</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="wire-label">Message</label>
+                            <textarea rows="6" class="wire-input"></textarea>
+                        </div>
+                        
+                        <button type="button" class="wire-btn w-full text-lg py-5">
+                            Envoyer la demande
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Map & Coordonnées -->
+                <div class="lg:col-span-5 flex flex-col gap-12">
+                    
+                    <div class="wire-box p-12">
+                        <h3 class="text-3xl font-bold mb-10">DT BAT Lorient</h3>
+                        <ul class="space-y-8 text-lg text-gray-700">
+                            <li class="flex items-center gap-6">
+                                <svg class="w-8 h-8 text-gray-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span>Rue de l'Industrie, 56100 Lorient</span>
+                            </li>
+                            <li class="flex items-center gap-6">
+                                <svg class="w-8 h-8 text-gray-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <span>02 97 XX XX XX</span>
+                            </li>
+                            <li class="flex items-center gap-6">
+                                <svg class="w-8 h-8 text-gray-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <span>contact@dtbat.fr</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="w-full h-80 wire-img flex flex-col gap-5">
+                        <svg class="w-12 h-12 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 01.553-.894L9 2l6 3 6-3 3 1.5v10.764a1 1 0 01-.553.894L15 20l-6-3z" />
+                        </svg>
+                        <span class="text-gray-500 font-bold text-lg">[ CARTE INTERACTIVE ]</span>
+                        <span class="text-base font-normal text-gray-400">Lorient & Morbihan</span>
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 mt-32 pt-12 border-t border-gray-300 flex flex-col sm:flex-row justify-between items-center gap-8 text-base text-gray-500">
+                <div class="font-bold text-gray-900 tracking-wider">DT BAT RENOVATION</div>
+                <div class="flex items-center gap-10">
+                    <a href="#" class="hover:text-gray-900 transition-colors">Mentions Légales</a>
+                    <span>&copy; 2026 DT BAT</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // STICKY SCROLL CONTROLLER
+        document.addEventListener("DOMContentLoaded", () => {
+            const textBlocks = document.querySelectorAll(".step-text-block");
+            const visualLayers = document.querySelectorAll(".step-visual-layer");
+
+            const observerOptions = {
+                root: null,
+                rootMargin: "-25% 0px -40% 0px",
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const step = entry.target.getAttribute("data-step");
+
+                        // Highlight active text
+                        textBlocks.forEach(block => {
+                            if (block === entry.target) {
+                                block.classList.remove("opacity-40");
+                                block.classList.add("opacity-100");
+                            } else {
+                                block.classList.remove("opacity-100");
+                                block.classList.add("opacity-40");
+                            }
+                        });
+
+                        // Show visual layer
+                        visualLayers.forEach(layer => {
+                            if (layer.id === `visual-${step}`) {
+                                layer.classList.remove("opacity-0", "pointer-events-none");
+                                layer.classList.add("opacity-100");
+                            } else {
+                                layer.classList.remove("opacity-100");
+                                layer.classList.add("opacity-0", "pointer-events-none");
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            textBlocks.forEach(block => observer.observe(block));
+        });
+    </script>
+</body>
+</html>
